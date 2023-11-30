@@ -1,0 +1,10 @@
+name: Test
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: sorekz/reusable-bug-workflow/.github/workflows/greet.yaml@v1
+    with:
+      user: ${{ github.actor }}
